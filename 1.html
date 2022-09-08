@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>50projects/day1</title>
+    <style>
+        body{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #fff;
+            transition: all 1s;
+            margin-top: 100px;
+            transition: all 1s;
+        }
+        div {
+            position: relative;
+            width: 100px;
+            height: 500px;
+            border-radius: 50px;
+        }
+         div span {
+            position: absolute;
+            display: none;
+            left: 20px;
+            top: 400px;
+            font-family: 'KaiTi';
+            font-weight: 700;
+            font-size: 30px;
+        }
+        div:nth-child(1){
+           background: url(../text2/theImages/thePic1.jpg) no-repeat center center;
+           width:500px
+        }
+        div:nth-child(1) span {
+            display: block;
+        }
+        div:nth-child(2){
+           background: url(../text2/theImages/thePic2.jpg) no-repeat center center;
+        }
+        div:nth-child(3){
+           background: url(../text2/theImages/thePic3.jpg) no-repeat center center;
+        }
+        div:nth-child(4){
+           background: url(../text2/theImages/thePic4.jpg) no-repeat center center;
+        }
+        div:nth-child(5){
+           background: url(../text2/theImages/thePic5.jpg) no-repeat center center;
+        }
+        
+    </style>
+</head>
+<body>
+    
+        <div>
+            <span>生如夏花</span>
+        </div>
+        <div>
+            <span>青霄丹霞</span>
+        </div>
+        <div>
+            <span>红镜灼炎</span>
+        </div>
+        <div>
+            <span>华景长明</span>
+        </div>
+        <div>
+            <span>水镜青云</span>
+        </div>
+
+    <script>
+        const demo = document.querySelectorAll('div')
+        demo.forEach((p)=>{
+            p.addEventListener('click',()=>{
+                for(let i=0;i<5;i++){
+                    demo[i].style.width = '100px'
+                    demo[i].firstElementChild.style.display = 'none'
+                    demo[i].style.transition = '1s ease'
+                }
+                p.style.width = '500px'
+                p.firstElementChild.style.display = 'block'
+                p.style.transition = '1s ease '
+            })
+        })
+    </script>
+</body>
+</html>
